@@ -1,0 +1,65 @@
+@import '../../../assets/css/variables.scss/';
+
+.login-form {
+  .field {
+    .control {
+      .forgot-password {
+        height: 100%;
+        margin-right: 5px;
+        svg {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 20px 0;
+    .custom-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+    input {
+      display: none;
+    }
+  }
+  .form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    a {
+      text-decoration: underline;
+      color: $primary-light;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .input {
+    background: $lightBg;
+    padding: 26.5px;
+    &::placeholder {
+      color: $grey-darker;
+    }
+  }
+  .form-button {
+    background: $primary;
+    font-size: 1rem;
+    padding: 26.5px 0;
+    line-height: 5px;
+    margin-top: 10px;
+    &:hover {
+      background: $primary-light;
+    }
+  }
+  .remember-me {
+    font-size: 14px; 
+    font-weight: 400;
+    line-height: 17px;
+    color: #1f1f1f;
+  }
+}

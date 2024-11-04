@@ -1,0 +1,41 @@
+@import '../../../assets/css/variables.scss/';
+
+.pagination {
+  justify-content: center;
+  .pagination-next {
+    color: $primary;
+    order: 3;
+    cursor: pointer !important;
+  }
+  .pagination-previous {
+    color: $primary;
+    order: 1;
+    cursor: pointer !important;
+  }
+  .pagination-list {
+    width: auto;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    .pagination-link {
+      color: $primary;
+      border: 1px solid $border-dark;
+      border-radius: 2px;
+      &.active {
+        background: $primary;
+        color: $white;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    margin: 0;
+    .pagination-previous, .pagination-next {
+      flex-grow: 0;
+      flex-shrink: 1
+    }
+  }
+}

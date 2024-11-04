@@ -1,0 +1,227 @@
+.product-card {
+  width: 100%;
+  border: 1px solid $border-dark;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  &.--outlet {
+    height: inherit;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 32px 96px 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .collapser-grid {
+    background-color: $white;
+    box-shadow: $boxShadowLight;
+
+    &.is-expand {
+    }
+
+    .product-grid {
+      border-top: 1px solid $border-dark;
+    }
+  }
+
+  &.is-active {
+    background-color: $border-light;
+  }
+
+  &__collapser-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__collapser-index {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $border-light;
+    border: 1px solid $border-dark;
+    width: 26px;
+    height: 26px;
+    border-radius: 3px;
+  }
+
+  &__photo_grid {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:not([data-value]) {
+      &::after {
+        display: none !important;
+      }
+    }
+
+    &::after {
+      content: attr(data-value);
+      position: absolute;
+      right: -8px;
+      top: -8px;
+      min-width: 24px;
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background-color: $secondary;
+      color: $white;
+      box-shadow: 0 0 0 3px $white;
+      padding: 5px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__detail {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $black;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: left !important;
+      cursor: pointer;
+
+      &.--secondary {
+        font-size: 16px;
+      }
+    }
+
+    &__description {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $grey-dark;
+      text-align: left !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    &__prices {
+      display: flex;
+      // grid-template-columns: 1fr auto;
+      grid-column-gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+      justify-content: flex-end;
+
+      &__list {
+        border: 1px solid $border-dark;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: max-content;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        &__title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          color: $grey-light;
+          margin-bottom: 2px;
+        }
+
+        &__value {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: $black;
+        }
+
+        li {
+          list-style: none;
+          margin: 0 !important;
+          padding: 8px 20px !important;
+          border-right: 1px solid $border-dark;
+
+          span,
+          p {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+        }
+      }
+
+      button {
+        height: 57px;
+      }
+    }
+  }
+}
+
+.button-primary {
+  width: max-content;
+  height: 100%;
+  background: $primary;
+  color: $white;
+  border: none;
+  border-radius: 3px;
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+  cursor: pointer;
+  &:hover {
+    background: $primary-dark-3x;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.product-img {
+  &.--dummy {
+    background-color: $grey-light;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    &::before {
+      content: attr(data-text);
+      color: #91928f;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.3;
+      text-align: center;
+    }
+  }
+}

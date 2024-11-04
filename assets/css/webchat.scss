@@ -1,0 +1,57 @@
+.rw-header {
+  background: #000759 !important;
+}
+
+// .rw-client {
+//   .rw-message-text {
+//   }
+// }
+
+.rw-from-response {
+  .rw-replies {
+    a {
+      background: #5f021f !important;
+      border: none !important;
+    }
+  }
+}
+
+.rw-message .rw-avatar {
+  width: 60px !important;
+  height: 70px !important;
+}
+
+.rw-message .rw-response {
+  max-width: 70% !important;
+}
+
+.rw-conversation-container .rw-title.rw-with-avatar {
+  // left: 58px;
+  left: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+// .rw-conversation-container .rw-header .rw-avatar {
+// }
+
+.rw-launcher {
+  // background-color: white !important;
+  background-color: transparent !important;
+  border: 0px solid #ddd !important;
+  width: 120px !important;
+  height: 120px !important;
+  box-shadow: 0 0px 0px 0px #b5b5b5 !important;
+}
+
+.rw-hide-sm {
+  height: 70px !important;
+}
+
+.rw-open-launcher {
+  height: 150px;
+}
+
+.rw-close-launcher {
+  width: 40px !important;
+}

@@ -1,0 +1,18 @@
+@import '../../../assets/css/variables.scss/';
+
+.sub-footer {
+  background-color: $primary-dark-2x;
+  padding: 2rem 0;
+  .copyright {
+    img {
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .sub-footer {
+    padding: 2rem 1rem !important;
+  }
+}

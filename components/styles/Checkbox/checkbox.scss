@@ -1,0 +1,71 @@
+@import '../../../assets/css/variables.scss/';
+
+.checkbox-item {
+  font-size: 14px;
+  max-height: 265px;
+  overflow: auto;
+  * {
+    cursor: pointer;
+    user-select: none;
+  }
+  .icon-wrap {
+    width: 46px;
+    height: 46px;
+  }
+  .input-field {
+    position: relative;
+  }
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $border-dark;
+    margin-right: 10px;
+    background: white;
+    border-radius: 3px;
+    &:focus {
+      border: 1px solid $border-dark;
+      box-shadow: none;
+    }
+  }
+  label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5px;
+    color: $black;
+    .tick-icon {
+      visibility: hidden;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+    }
+  }
+  .checked {
+    input {
+      background: $green;
+    }
+    .icon-wrap {
+      background: $primary;
+      color: $white;
+    }
+    .tick-icon {
+      color: $white;
+      visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-item .checked .icon-wrap {
+    background: #0d2f81;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+}

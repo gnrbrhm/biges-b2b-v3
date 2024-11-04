@@ -1,0 +1,263 @@
+@import '../../../assets/css/variables.scss/';
+
+.fav-menu-container {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(31, 31, 31, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  .fav-menu {
+    position: absolute;
+    width: 800px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      padding: 0 25px;
+
+      height: 110px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(31, 31, 31, 0.1);
+      justify-content: space-between;
+      &__text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 31px;
+        color: #1f1f1f;
+      }
+
+      &__group {
+        display: flex;
+        flex-direction: row;
+
+        &__basket {
+          display: flex;
+          flex-direction: row;
+          &__text {
+            display: grid;
+            align-self: center;
+            grid-template-rows: 17px 14px;
+
+            &__top {
+              font-family: Inter;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 17px;
+              text-align: center;
+            }
+            &__bottom {
+              text-align: center;
+
+              font-family: Inter;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 15px;
+
+              color: rgba(31, 31, 31, 0.5);
+            }
+          }
+        }
+        &__icon {
+          cursor: pointer;
+          margin-left: 10px;
+          width: 50px;
+          height: 50px;
+          background: rgba(31, 31, 31, 0.1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 25px;
+        }
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 30px 25px;
+      background: rgba(13, 47, 129, 0.05);
+      border-radius: 5px;
+      width: 750px;
+      height: 90px;
+
+      &__content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 635px 1fr;
+        padding: 20px 20px;
+
+        &__left {
+          display: grid;
+          grid-template-columns: 30px 590px;
+          grid-column-gap: 15px;
+          align-self: center;
+
+          p {
+            align-self: center;
+
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #0d2f81;
+          }
+        }
+        &__right {
+          align-self: flex-start;
+          justify-self: end;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__list {
+      overflow-y: scroll;
+      height: 100%;
+      padding: 0 25px;
+      min-height: 600px;
+
+      &__card-container {
+        padding: 20px 0;
+        border-bottom: 1px solid $border-dark;
+
+        &__card {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-template-columns: 80px 1fr 1fr;
+          grid-column-gap: 20px;
+
+          &__img {
+            width: 80px;
+            height: 80px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border: 1px solid rgba(31, 31, 31, 0.1);
+            box-sizing: border-box;
+            border-radius: 3px;
+
+            &__sub {
+              cursor: pointer;
+              margin-top: 42px;
+              margin-left: 37px;
+            }
+          }
+
+          &__info {
+            &__title {
+              font-family: Inter;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 22px;
+
+              color: #1f1f1f;
+            }
+            &__subtitle {
+              margin-top: 5px;
+              font-family: Inter;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 17px;
+
+              color: rgba(31, 31, 31, 0.5);
+            }
+          }
+          &__price {
+            display: grid;
+            grid-template-rows: 24px 24px;
+            grid-row-gap: 10px;
+
+            &__item-group {
+              align-self: center;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-end;
+
+              &__first {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                color: rgba(31, 31, 31, 0.5);
+              }
+
+              &__second {
+                margin-left: 10px;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #1f1f1f;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__footer {
+      margin: 30px 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      &__close {
+        cursor: pointer;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: rgba(31, 31, 31, 0.7);
+      }
+
+      &__button {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+
+        width: 149px;
+        height: 55px;
+
+        background: $primary;
+        color: $white;
+        border: none;
+        margin-left: 40px;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover {
+          background: $primary-dark-3x;
+        }
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

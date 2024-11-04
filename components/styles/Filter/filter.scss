@@ -1,0 +1,149 @@
+@import '../../../assets/css/variables.scss/';
+
+.filter {
+  background: $bg-grey;
+  border-radius: 2px;
+  padding: 30px 0;
+  text-align: left;
+  .filter-content {
+    border-top: 1px solid $border-dark;
+    // padding-top: 30px;
+    .filter-inner {
+      padding: 0 15px 15px 15px;
+    }
+  }
+  .title {
+    color: $black;
+  }
+  .filtering-control {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    .clear {
+      color: $text-grey;
+      font-size: 1em;
+      cursor: pointer;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  .selected-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    .selected {
+      min-width: 100px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      color: $text-grey;
+      background: $bg-dark-grey;
+      font-size: 12px;
+      border-radius: 100px;
+      input {
+        display: none;
+      }
+      .selected-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        background: $white;
+        border-radius: 50%;
+        margin-left: 6px;
+        color: $text-dark-grey;
+        cursor: pointer;
+      }
+      .brand {
+        color: $text-grey;
+        padding-top: 0;
+        font-size: 10px;
+        line-height: 15px;
+      }
+      .brand-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 7px;
+        .brand-name {
+          color: $black;
+          font-size: 12px;
+          line-height: 10px;
+        }
+      }
+    }
+  }
+  .opportunities {
+    padding-top: 20px;
+  }
+  .brand {
+    padding-top: 20px;
+  }
+}
+
+.selected-filter-wrapper {
+  padding: 0 5px;
+  margin: 0 0 10px 10px;
+  .selected-filter-list {
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-gap: 10px;
+    margin-top: 0;
+  }
+  .selected-filter {
+    min-width: 100px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    color: $text-grey;
+    background: $bg-dark-grey;
+    font-size: 12px;
+    border-radius: 100px;
+    cursor: pointer;
+    .filter-name {
+      color: $black;
+      font-size: 12px;
+      line-height: 10px;
+    }
+    .remove-filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      background: $white;
+      border-radius: 50%;
+      margin-left: 6px;
+      margin-right: 6px;
+      color: $text-dark-grey;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filter {
+    padding: 0 15px;
+    background: #fff;
+    .filter-content {
+      .filter-inner {
+        padding: 0;
+      }
+    }
+    .filtering-control {
+      padding: 0;
+    }
+    .opportunities {
+      .filter-inner {
+        padding: 0;
+      }
+    }
+  }
+}

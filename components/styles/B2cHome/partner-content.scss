@@ -1,0 +1,62 @@
+@import '../../../assets/css/variables.scss';
+
+.partner-content {
+  top: -20px;
+  position: relative;
+  margin-bottom: 50px;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+
+    .active {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $bg-button;
+      position: relative;
+    }
+    .active::after {
+      content: '';
+      width: 70px;
+      height: 1px;
+      position: absolute;
+      border: 1px solid$bg-button;
+      top: 27px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__partner {
+      cursor: pointer;
+      justify-self: start;
+
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: $grey-light;
+    }
+    &__ref {
+      cursor: pointer;
+      justify-self: end;
+
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: $grey-light;
+    }
+  }
+
+  &__slider {
+    height: 126px;
+  }
+}

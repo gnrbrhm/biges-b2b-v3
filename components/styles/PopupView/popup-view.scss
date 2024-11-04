@@ -1,0 +1,136 @@
+@import '../../../assets/css/variables.scss/';
+
+.popup-view-overlay {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-transparent;
+}
+.product-popup-model {
+  color: $black;
+  margin: 10px 0;
+  line-height: 31px;
+  font-size: 26px;
+  font-weight: 600;
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  z-index: 999;
+}
+.product-popup-modal {
+  position: fixed;
+  width: 1137px;
+  height: 750px;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  background: $white;
+  margin-top: -377px;
+  margin-left: -560px;
+
+  .product-modal-inner {
+    display: flex;
+    background: $white;
+    height: 100%;
+  }
+
+  .image-field {
+    flex: 0 75%;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .quick-view-product-image {
+      display: flex;
+      flex-direction: column;
+      width: 750px;
+      height: auto;
+    }
+  }
+
+  .info-field {
+    flex: 0 25%;
+    position: relative;
+    background: $bg-grey;
+    text-align: left;
+    padding: 50px 20px 20px 20px;
+
+    .close-modal {
+      background: $bg-dark-red;
+      color: $secondary;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider-thumbnails {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      .thumbnails {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: auto;
+        overflow-y: hidden;
+        max-height: 70px;
+        flex-direction: row;
+        width: 70%;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        .thumb {
+          scroll-behavior: smooth;
+          scroll-snap-align: center;
+          transform-origin: center center;
+          transform: scale(1);
+          transition: transform 0.5s;
+          width: 50px;
+          min-width: 50px;
+          height: 50px;
+          min-height: 50px;
+          border: 1px solid $border-dark;
+          border-radius: 3px;
+          margin: 5px;
+          cursor: pointer;
+          opacity: 0.6;
+
+          img {
+            height: 48px;
+          }
+
+          &.is-active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.slider-control {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.popUp-next {
+  position: relative;
+  left: -4px;
+}
+
+.popUp-prev {
+  position: relative;
+  right: -4px;
+}

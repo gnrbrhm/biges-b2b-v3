@@ -1,0 +1,50 @@
+@import '../../../assets/css/variables.scss/';
+
+.selector {
+  border: 1px solid $border-dark;
+  position: relative;
+  z-index: 1;
+  width: 150px;
+  border-color: $border-dark;
+  border-radius: 2px;
+  color: $text-dark-grey;
+  height: 46px;
+  font-size: 13px;
+  appearance: none;
+  cursor: pointer;
+  .hidden {
+    visibility: hidden;
+  }
+  .label {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    font-size: 13px;
+    color: $text-dark-grey;
+    font-weight: 300;
+    line-height: 15px;
+    margin-bottom: 0;
+    .icon {
+      color: #dbdbdb;
+    }
+  }
+  ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    border: 1px solid $border-dark;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    li {
+      padding: 12px;
+      color: #666;
+      &:hover {
+        background-color: rgba(13, 47, 129, 0.05);
+        color: $primary;
+      }
+    }
+  }
+}

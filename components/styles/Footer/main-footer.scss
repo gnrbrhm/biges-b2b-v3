@@ -1,0 +1,43 @@
+@import '../../../assets/css/variables.scss/';
+
+.main-footer {
+  background-color: $primary-dark;
+  border-top: 5px solid $secondary;
+  padding: 4rem 0;
+  .footer-info {
+    margin-bottom: 20px;
+    .footer-subtitle {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+  .footer-menu {
+    h3 {
+      margin-bottom: 20px;
+      color: $grey-light;
+    }
+    .footer-sub-menu {
+      li {
+        a {
+          line-height: 25px;
+          color: $grey-light;
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+  .gap {
+    margin-right: 8px;
+  }
+  .mb-6 {
+     margin-top: 6px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main-footer {
+    padding: 1rem !important;
+  }
+}

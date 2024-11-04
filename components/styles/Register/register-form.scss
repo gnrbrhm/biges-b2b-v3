@@ -1,0 +1,73 @@
+@import '../../../assets/css/variables.scss/';
+
+.company_web {
+  width: 96% !important;
+  margin-left: 17px;
+}
+
+.register-form {
+  // margin-top: -20vh;
+  .field {
+    display: flex;
+    gap: 10px;
+
+    *:not(span) {
+      width: 100%;
+    }
+    .control {
+      .forgot-password {
+        height: 100%;
+        margin-right: 5px;
+      }
+    }
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 20px 0;
+    color: $grey-darker;
+    a {
+      color: $primary;
+      margin-right: 5px;
+    }
+    .custom-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+    input {
+      display: none;
+    }
+  }
+  .form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    a {
+      text-decoration: underline;
+      color: $primary-light;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .input {
+    background: $lightBg;
+    &::placeholder {
+      color: $grey-darker;
+    }
+  }
+  .form-button {
+    background: $primary;
+    font-size: 1rem;
+    padding: 26.5px 0;
+    line-height: 5px;
+    margin-top: 10px;
+    &:hover {
+      background: $primary-light;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import '../../../assets/css/variables.scss/';
+
+.showcase {
+  .showcase-inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .showcase-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: $primary;
+    padding: 0;
+    .showcase-info {
+      position: relative;
+      z-index: 1;
+      padding: 0 40px;
+      .showcase-title {
+        color: $white;
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 600;
+      }
+      .showcase-desc {
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 300px;
+        margin-top: 30px;
+      }
+      .showcase-action {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        svg {
+          opacity: 0.5;
+        }
+        a {
+          color: $white;
+          font-size: 12px;
+          line-height: 15px;
+          text-decoration: none;
+          margin-left: 5px;
+        }
+      }
+    }
+    .custom-effect {
+      position: absolute;
+      right: 0;
+      img {
+        z-index: -1;
+        mix-blend-mode: overlay;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .showcase-right {
+    background: #d2ddf3;
+    overflow: hidden;
+    padding: 0;
+    .showcase-products {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 23px;
+      padding: 25px;
+
+      .product-price {
+        display: none;
+      }
+
+      .product-card {
+        background: $white;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 435px;
+        .product-image {
+          img {
+            max-height: 80px;
+          }
+          &:hover {
+            // .overlay {
+            //   visibility: hidden;
+            // }
+          }
+        }
+        .alternative-btn {
+          background: $primary;
+          color: $white;
+          border: none;
+          border-radius: 3px;
+          width: 100%;
+          height: 56px;
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          cursor: pointer;
+          display: none;
+          align-items: center;
+          justify-content: center;
+        }
+        &:hover {
+          // .product-price {
+          .alternative-btn {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

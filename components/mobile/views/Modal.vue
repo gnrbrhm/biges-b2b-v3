@@ -1,0 +1,131 @@
+<template>
+  <div class="modal-overlay" :class="isActive ? 'active' : 'inactive'">
+    <div ref="cmodal" class="modal-container">
+      <div
+        :style="{ width: width, height: height }"
+        :class="
+          defaultButton
+            ? 'modal-container__content'
+            : 'modal-container__empty-content'
+        "
+      >
+        <div v-if="defaultButton" class="modal-container__content__header">
+          <div @click="$emit('close')" class="modal-icon">
+            <app-icon name="close-lg" />
+          </div>
+        </div>
+        <slot></slot>
+        <div v-if="defaultButton" class="modal-container__content__footer">
+          <button @click="$emit('onSubmit')" class="modal-button">
+            GÖNDER
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Icon from '@/components/Icon.vue'
+
+export default {
+  name: 'Modal',
+  props: {
+    isActive: { type: Boolean, default: false },
+    defaultButton: { type: Boolean, default: false },
+    width: { type: String, default: '330' },
+    height: { type: String, default: '240' }
+  },
+  components: { AppIcon: Icon }
+}
+</script>
+
+<style lang="scss" scoped>
+// @import '@/assets/css/variables.scss/';
+.modal-overlay {
+  position: fixed;
+  display: block;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 31, 31, 0.6);
+  z-index: 99999999999;
+  .modal-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    overflow-y: auto;
+
+    &__empty-content {
+      padding: 10px;
+      width: 330px;
+      height: 240;
+      background: #ffffff;
+      overflow-y: auto;
+    }
+
+    &__content {
+      padding: 20px;
+      width: 330px;
+      height: 240x;
+      background: #ffffff;
+      display: grid;
+      grid-template-rows: 20px 1fr 100px;
+      overflow-y: auto;
+
+      &__header {
+        justify-self: end;
+        align-self: center;
+
+        .modal-icon {
+          width: 30px;
+          text-align: right;
+        }
+      }
+
+      &__footer {
+        width: 100%;
+        display: grid;
+        align-items: center;
+
+        .modal-button {
+          justify-self: end;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 129px;
+          height: 45px;
+          border: none;
+          cursor: pointer;
+
+          background: #0d2f81;
+          border-radius: 3px;
+          text-align: center;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+          color: $white;
+
+          &:hover {
+            background: $primary-dark-3x;
+          }
+          &:disabled {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+.active {
+  display: block;
+}
+.inactive {
+  display: none;
+}
+</style>

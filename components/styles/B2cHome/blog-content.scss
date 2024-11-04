@@ -1,0 +1,371 @@
+.blog-content-b2c {
+  display: grid;
+  height: auto;
+  width: 100%;
+  position: relative;
+  grid-template-rows: 80px 370px 350px;
+  grid-row-gap: 50px;
+  top: -330px;
+  // border-bottom: 1px solid rgba(31, 31, 31, 0.1);
+  padding-bottom: 100px;
+  margin-bottom: -330px;
+
+  .blog_header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    &__p2 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 46px;
+      line-height: 56px;
+      color: $black;
+
+      a {
+        color: black;
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: #8a8b8d;
+        }
+      }
+    }
+  }
+
+  .blog_content_mid {
+    display: grid;
+    height: 370px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+
+    &__left::after {
+      content: url('../../../assets/svg/blog-shape.svg');
+      top: -43px;
+      left: 444px;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__left {
+      height: 370px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      z-index: 2;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__right {
+      height: 370px;
+      padding-top: 124px;
+      padding-right: 10%;
+      padding-bottom: 40px;
+
+      &__tag {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+        height: 24px;
+
+        &__left {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          padding: 0.3rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+
+          /* Biges Blue */
+          background: $bg-button-normal;
+
+          color: $bg-button;
+        }
+        &__right {
+          padding: 0.3rem;
+          margin-left: 15px;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          color: $grey-darker;
+        }
+      }
+      &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        height: auto;
+        max-height: 80px;
+        margin-bottom: 20px;
+      }
+      &__text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: $placeholder-input;
+        height: auto;
+        max-height: 67px;
+        margin-bottom: 30px;
+      }
+      &__footer {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: row;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $placeholder-input;
+      }
+    }
+  }
+  .blog_footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+  }
+}
+
+.blog-content-b2b {
+  display: grid;
+  height: auto;
+  width: 100%;
+  position: relative;
+  grid-template-rows: 80px 370px 350px;
+  grid-row-gap: 50px;
+  margin-bottom: 15rem;
+  margin-top: 5rem;
+
+  .blog_header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    &__p2 {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 46px;
+      line-height: 56px;
+
+      color: $black;
+      a {
+        color: black;
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: #8a8b8d;
+        }
+      }
+    }
+  }
+
+  .blog_content_mid {
+    display: grid;
+    height: 370px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+
+    &__left::after {
+      content: url('../../../assets/svg/blog-shape.svg');
+      top: -43px;
+      left: 444px;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &__left {
+      height: 370px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      z-index: 2;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__right {
+      height: 370px;
+      padding-top: 124px;
+      padding-right: 10%;
+      padding-bottom: 40px;
+
+      &__tag {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15px;
+        height: 24px;
+
+        &__left {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          padding: 0.3rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+
+          /* Biges Blue */
+          background: $bg-button-normal;
+
+          color: $bg-button;
+        }
+        &__right {
+          padding: 0.3rem;
+          margin-left: 15px;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          color: $grey-darker;
+        }
+      }
+      &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        height: auto;
+        max-height: 80px;
+        margin-bottom: 20px;
+      }
+      &__text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: $placeholder-input;
+        height: auto;
+        max-height: 67px;
+        margin-bottom: 30px;
+      }
+      &__footer {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: row;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $placeholder-input;
+      }
+    }
+  }
+  .blog_footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+
+    .footer-card {
+      background-color: $white;
+
+      display: grid;
+      height: 350px;
+      width: 100%;
+      grid-template-rows: 250px 100px;
+
+      .img-div {
+        height: 250px;
+        width: 100%;
+        position: relative;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        &__tag {
+          position: absolute;
+          z-index: 10;
+          display: flex;
+          flex-direction: row;
+          background-color: white;
+          bottom: 0;
+          width: auto;
+          padding: 0.5rem;
+
+          &__left {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            padding: 0.3rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+
+            /* Biges Blue */
+            background: rgba(13, 47, 129, 0.1);
+
+            color: #0d2f81;
+          }
+          &__right {
+            padding: 0.3rem;
+            margin-left: 10px;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            color: rgba(31, 31, 31, 0.5);
+          }
+        }
+      }
+      .content {
+        padding-top: 20px;
+
+        &__first {
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          color: $black;
+          margin-bottom: 25px;
+        }
+
+        &__footer {
+          align-self: flex-end;
+          display: flex;
+          flex-direction: row;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+
+          color: $placeholder-input;
+        }
+      }
+    }
+  }
+}
+
+.link-color {
+  color: #001163;
+}

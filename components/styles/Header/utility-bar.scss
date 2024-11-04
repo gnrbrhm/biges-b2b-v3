@@ -1,0 +1,72 @@
+.utility-bar {
+  width: 100%;
+  background-color: $primary-dark;
+  background-color: $hybrone-year-color;
+  color: $light;
+  padding: 9px;
+  .usd-icon-special {
+    padding-left: 8px;
+  }
+  .euro-icon-special{
+    padding-left: 4px;
+
+  }
+  .utilty-bar-label{
+    padding-right: 5px;
+    color:$utilty-label-color
+  }
+
+  .communicate{
+    color:rgba(255, 255, 255, 0.30)
+  }
+
+  .tel {
+    display: flex;
+    align-items: center;
+  }
+  .currency {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    .currency-wrap {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .currency-label {
+      margin-right: 10px;
+    }
+  }
+  .icon {
+    color: $white;
+    &.bordered-icon {
+      width: 2rem;
+      height: 2rem;
+    }
+    
+  }
+  .hybrone-new-year{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    img{
+        padding-right: 25px;
+        border-right: 1px solid #FFF;
+    }
+    .text{
+        color:  #FFF;
+        text-align: right;
+        font-family: Inter;
+        font-size: 16.133px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: 25px;
+    }
+  }
+}

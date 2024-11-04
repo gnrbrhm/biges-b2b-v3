@@ -1,0 +1,99 @@
+@import '../../../assets/css/variables.scss/';
+
+.point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+        border-right: 1px solid $border-dark;
+    }
+    .point-percentage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        .percent {
+            background: $white;
+            font-size: 20px;
+            fill: $primary;
+            font-weight: 600;
+            line-height: 24px;
+        }
+        .percentage-circle {
+            width: 155px;
+            height: 155px;
+            font-size: 20px;
+            color: $primary;
+            font-weight: 600;
+            line-height: 24px;
+          }
+          
+          .percentage-circle-center {
+            stroke: $bg-grey-3x;
+            stroke-width: 13;
+            fill: none;
+          }
+          
+          .percentage-circle-active {
+            stroke: $primary;
+            stroke-width: 13;
+            stroke-linecap: round;
+            fill: none;
+          }
+    }
+    .point-info {
+        display: flex;
+        flex-direction: column;
+        .point-name {
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: bold;
+            color: $text-grey;
+            margin-bottom: 5px;    
+            text-transform: uppercase;
+            svg {
+                opacity: 0.3;
+            }
+        }
+        .point-value {
+            font-size: 26px;
+            line-height: 31px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .total-points-link {
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+
+  .bg {
+    fill: none;
+    stroke: $bg-grey-3x;
+    stroke-width: 2;
+  }
+
+  .active {
+    fill: none;
+    stroke: $primary;
+    stroke-width: 2;
+    stroke-dasharray: 51 51;
+    stroke-dashoffset: -51;
+    stroke-linecap: round;
+    //stroke-dashoffset: -35px;
+  }
+
+  .text {
+    font-size: 3px;
+    fill: $primary;
+    font-weight: 600;
+    line-height: 24px;
+  }

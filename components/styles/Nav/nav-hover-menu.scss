@@ -1,0 +1,36 @@
+@import '../../../assets/css/variables.scss';
+
+.nav-hover-content {
+  width: 100%;
+  background-color: $bg-lightblue;
+  position: relative;
+  z-index: 999;
+}
+
+details {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  z-index: 999;
+}
+
+details > summary {
+  list-style: none;
+  outline: none;
+  width: 100%;
+
+  &::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: ' ';
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}

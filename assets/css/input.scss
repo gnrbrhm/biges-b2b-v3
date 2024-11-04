@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+.form-input-grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 25px;
+  width: 100%;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 5px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: attr(data-error);
+    position: absolute;
+    bottom: -18px;
+    font-size: 11px;
+    color: $secondary;
+  }
+
+  &.justify-content {
+    justify-content: center;
+    &.end {
+      justify-content: end;
+    }
+    &.start {
+      justify-content: flex-start;
+    }
+    &.space-between {
+      justify-content: space-between;
+    }
+
+    button {
+      width: max-content !important;
+    }
+  }
+
+  .flat-input,
+  .flat-select,
+  .flat-textarea {
+    background-color: $bg-input;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+    padding: 15px !important;
+    height: 55px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    &::placeholder {
+      color: gray; //$placeholder-input;
+    }
+  }
+
+  .flat-select {
+    cursor: pointer;
+  }
+
+  .flat-textarea {
+    height: 115px;
+    resize: vertical;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-grid .flat-input,
+  .input-grid .flat-select,
+  .input-grid .flat-textarea {
+    padding: 5px !important;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .flat-textarea {
+    min-height: 60px;
+    max-height: 100px;
+  }
+}

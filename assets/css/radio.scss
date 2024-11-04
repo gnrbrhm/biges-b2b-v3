@@ -1,0 +1,74 @@
+@import './variables.scss/';
+
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: $primary;
+  padding-left: 25px;
+
+  &[disabled] {
+    color: $text-grey;
+  }
+}
+
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-check {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $border-dark;
+  display: flex;
+}
+
+.radio:hover input ~ .radio-check {
+  background-color: $border-dark;
+}
+
+.radio input:checked ~ .radio-check {
+  background-color: $white;
+  box-shadow: 0 0 0 2px $primary;
+}
+
+.radio[disabled] input:checked ~ .radio-check {
+  box-shadow: 0 0 0 2px $text-grey;
+}
+
+.radio-check:after {
+  content: '';
+  display: none;
+}
+
+.radio input:checked ~ .radio-check:after {
+  display: block;
+}
+
+.radio .radio-check:after {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: $primary;
+  margin: auto;
+}
+
+.radio[disabled] .radio-check:after {
+  background: $text-grey;
+}

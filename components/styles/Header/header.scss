@@ -1,0 +1,19 @@
+.bordered-icon {
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  padding: 1.8em 0;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,182 @@
+@import '../../../assets/css/variables.scss/';
+
+.opportunity-slider {
+  position: relative;
+  margin: 70px 0;
+  .slider-template {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    width: 100%;
+    height: 575px;
+    .content-left {
+      padding: 100px;
+      background: $primary;
+      position: relative;
+      .custom-effect {
+        position: absolute;
+        left: 0;
+        top: 0;
+        img {
+          z-index: -1;
+          mix-blend-mode: overlay;
+        }
+      }
+    }
+    .content-right {
+      background: #d2ddf3;
+      z-index: 1;
+    }
+  }
+  .product-slider {
+    position: absolute;
+    width: 100%;
+    // top: 50%;
+    // transform: translateY(-50%);
+    z-index: 9998;
+    padding: 50px;
+    .product-slider-inner {
+      display: flex;
+      justify-content: space-between;
+      .product-list {
+        overflow: hidden;
+        width: 66.5%;
+        &.opportunity-slider-products {
+          .slides {
+            .product-card {
+              .alternative-btn {
+                display: none;
+              }
+            }
+          }
+        }
+        .slides {
+          display: flex;
+          transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          .product-card {
+            background: $white;
+            margin-right: 1px;
+            border: 0;
+            max-width: none;
+            margin-top: 25px;
+            display: grid;
+            grid-template-rows: auto;
+            align-items: stretch;
+            // .product-action {
+            //   display: none;
+            // }
+            .product-information {
+              .product-brand {
+                margin: 35px 0 0 0;
+              }
+              .product-image {
+                // &:hover {
+                //   .overlay {
+                //     visibility: hidden;
+                //   }
+                //   .product-img {
+                //     filter: none;
+                //   }
+                // }
+                .product-img {
+                  max-height: 160px;
+                }
+              }
+            }
+            &:hover {
+              //.product-action {
+              //  position: absolute;
+              //  left: 0;
+              //  bottom: 0;
+              //  display: grid;
+              //}
+              // .product-image {
+              //     width: 100px;
+              //     margin: 0 auto;
+              // }
+            }
+          }
+        }
+      }
+      .slider-info {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 34%;
+        min-width: 34%;
+        .slider-title {
+          color: $white;
+          font-size: 36px;
+          line-height: 44px;
+          font-weight: 600;
+          padding-right: 100px;
+        }
+        .slider-desc {
+          font-size: 16px;
+          line-height: 19px;
+          color: rgba(255, 255, 255, 0.7);
+          max-width: 300px;
+          margin-top: 30px;
+        }
+        .slider-btn {
+          button {
+            background: $white;
+            color: $primary;
+            padding: 19px 33px;
+            border: none;
+            border-radius: 2px;
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 17px;
+            cursor: pointer;
+          }
+        }
+        .slider-controls {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
+          width: 100px;
+          height: 40px;
+          margin-top: 30px;
+          .controls-icon {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            border: 2px solid $light-2x;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Effects */
+
+// Colors
+$bg-color: $primary;
+$dot-color: rgba(255, 255, 255, 0.3);
+
+// Dimensions
+$dot-size: 2px;
+$dot-space: 32px;
+
+.dots-effect {
+  position: absolute;
+  bottom: 23px;
+  right: -64px;
+  width: 250px;
+  height: 232px;
+  background-image: radial-gradient(
+    circle at $dot-size $dot-size,
+    $dot-color $dot-size,
+    transparent 0
+  );
+  background-size: $dot-space $dot-space;
+}
